@@ -1,15 +1,4 @@
 import streamlit as st
-from streamlit_lottie import st_lottie
-import requests
-
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-# ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://lottie.host/924ecd9e-1512-4e6f-b21a-f696571d381b/pU6OJ1olFh.json")
 
 def about_me():
     # ---- HEADER SECTION ----
@@ -37,5 +26,3 @@ def about_me():
                 """
             )
             st.write("[Subscribe here (Weekly uploads) >](https://rb.gy/9x4m89)")
-        with right_column:
-            st_lottie(lottie_coding, height=300, key="coding")
